@@ -7,7 +7,15 @@
     <header><% include ./partials/header %></header>
 
     <main>
-      <div><% include ./partials/greeting %></div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div><% include ./partials/greeting %></div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="well"><h3>My c00l Subscribers:</h3></div>
+        </div>
+      </div>
     </main>
 
     <footer><% include ./partials/footer %></footer>
