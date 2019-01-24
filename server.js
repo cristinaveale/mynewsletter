@@ -5,7 +5,9 @@ const path = require("path");
 
 // grab routes
 const indexRouter = require("./routes/index");
+const subscribersRouter = require("./routes/subscribers");
 const subscriberRouter = require("./routes/subscribers");
+
 
 const app = express();
 
@@ -18,7 +20,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/subscribers", subscriberRouter);
+app.use("/subscribers", subscribersRouter);
+app.use("/subscriber", subscriberRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

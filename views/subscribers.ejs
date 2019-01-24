@@ -14,6 +14,15 @@
 
         <div class="col-sm-4">
           <div class="well"><h3>My c00l Subscribers:</h3></div>
+          <ul>
+              <% subscribers.forEach(function(subscriber) { %>
+                  <li>
+                    <a href="/subscriber/<%= subscriber.id %>">
+                      <%= subscriber.first_name %> <%= subscriber.last_name %>
+                    </a>
+                  </li>
+              <% }); %>
+          </ul>
         </div>
       </div>
     </main>
