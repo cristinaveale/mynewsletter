@@ -5,7 +5,7 @@ const cassandra = require('cassandra-driver');
 const client = new cassandra.Client({contactPoints: ['127.0.0.1'], localDataCenter: 'dc1'});
 
 client.connect(function( err, result){
-  console.log('index: cassandra connected to subscribers');
+  console.log('subscribers: cassandra connected to subscribers');
 });
 
 // Gets all subscribers from DSE table

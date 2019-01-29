@@ -5,8 +5,9 @@ const path = require("path");
 
 // grab routes
 const indexRouter = require("./routes/index");
-const subscribers = require("./routes/subscribers");
 const subscriber = require("./routes/subscriber");
+const subscribers = require("./routes/subscribers");
+const addSubscriber = require("./routes/addSubscriber");
 
 
 const app = express();
@@ -20,8 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter); 
-app.use("/subscribers", subscribers);
 app.use("/subscriber", subscriber);
+app.use("/subscribers", subscribers);
+app.use("/addSubscriber", addSubscriber);
+
 
 
 
