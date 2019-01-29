@@ -7,14 +7,11 @@
     <header><% include ./partials/header %></header>
 
     <main>
-      <div class="row">
-        <div class="col-sm-8">
-          <div><% include ./partials/greeting %></div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="well"><h3>My c00l Subscribers:</h3></div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class="well"><h3>My Subscribers:</h3></div>
           <ul>
+            <!--Looping through subscribers-->
               <% subscribers.forEach(function(subscriber) { %>
                   <li>
                     <a href="/subscriber/<%= subscriber.id %>">
