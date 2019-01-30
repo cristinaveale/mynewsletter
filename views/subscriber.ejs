@@ -8,18 +8,16 @@
 
     <main>
       <div><% include ./partials/greeting %></div>
-      
-      <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-          <div class="well"><h3>Subscriber Detail:</h3></div>
-          <ul>
-            <li><%= first_name %></li>
-            <li><%= last_name %></li>
-            <li><%= email %></li>
-            <li><%= id %></li>
-          </ul>
-        </div>
-      </div>
+
+      <h3>Subscriber Detail:</h3>
+      <ul>
+        <li><%= first_name %></li>
+        <li><%= last_name %></li>
+        <li><%= email %></li>
+        <li><%= id %></li>
+      </ul>
+      <a href="/editSubscriber/<%= id %>" class="editSubscriber btn btn-sm btn-outline-secondary">Edit Information</a>
+      <a href="#" class="editSubscriber btn btn-sm btn-outline-secondary" data-id="<$= id %>">Delete Information</a>
     </main>
 
     <footer><% include ./partials/footer %></footer>

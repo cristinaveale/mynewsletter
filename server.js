@@ -8,6 +8,7 @@ const indexRouter = require("./routes/index");
 const subscriber = require("./routes/subscriber");
 const subscribers = require("./routes/subscribers");
 const addSubscriber = require("./routes/addSubscriber");
+const editSubscriber = require("./routes/editSubscriber");
 
 
 const app = express();
@@ -24,6 +25,7 @@ app.use("/", indexRouter);
 app.use("/subscriber", subscriber);
 app.use("/subscribers", subscribers);
 app.use("/addSubscriber", addSubscriber);
+app.use("/editSubscriber", editSubscriber);
 
 
 
