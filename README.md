@@ -7,7 +7,7 @@ A simple CRUD Node.js application using the DataStax Cassandra Driver and Expres
 ## Prerequisites
   - Install [DSE Cassandra](https://docs.datastax.com/en/install/6.7/install/installTOC.html) 
   - Install [Node.js](https://nodejs.org/en/download/) 
-  - Install [Nodemon](https://nodemon.io/) (This is optional, watches for changes and automatically restarts the server)
+  - Install [Nodemon](https://nodemon.io/) (Watches for changes and automatically restarts the server)
 
 ## Installation
 
@@ -16,7 +16,7 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 $ cd mynewsletter
 $ npm install
-$ nodemon server
+$ npm start
 ```
 
 You'll then see the following in your terminal:
@@ -26,7 +26,12 @@ You'll then see the following in your terminal:
 [nodemon] to restart at any time, enter `rs`
 [nodemon] watching: *.*
 [nodemon] starting `node server.js`
-8080 is the magic port
+Express server listening on port 8080 in development mode
+index: cassandra connected to index
+subscribers: cassandra connected to subscribers
+subscriber: cassandra connected to subscriber
+addSubscriber: cassandra connected to add subscriber
+editSubscriber: cassandra connected to editSubscriber
 ```
 Navigate to: http://localhost:8080/
 
