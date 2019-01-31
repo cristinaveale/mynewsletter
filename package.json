@@ -2,6 +2,7 @@
   "name": "mynewsletter",
   "version": "0.0.1",
   "private": true,
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },

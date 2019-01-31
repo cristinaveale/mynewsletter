@@ -1,7 +1,9 @@
 // server.js
 // load the things we need
 const express = require("express");
+const app = express();
 const path = require("path");
+const port = process.env.PORT || 8080;
 
 // grab routes
 const indexRouter = require("./routes/index");
@@ -11,7 +13,7 @@ const addSubscriber = require("./routes/addSubscriber");
 const editSubscriber = require("./routes/editSubscriber");
 
 
-const app = express();
+
 
 // view e ngine setup
 app.set("views", path.join(__dirname, "views"));
@@ -27,23 +29,16 @@ app.use("/subscribers", subscribers);
 app.use("/addSubscriber", addSubscriber);
 app.use("/editSubscriber", editSubscriber);
 
-// catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   next(createError(404));
-// });
+// set the home page route
+app.get('/', function(req, res) {
 
-// index page
-app.get("/", function(req, res) {
-  res.render("pages/index");
+  // ejs render automatically looks in the views folder
+  res.render('index');
 });
 
-// subscriber page
-app.get("/subscribers", function(req, res) {
-  res.render("pages/subscribers");
-});
 
-app.listen(process.env.PORT || 8080, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+app.listen(port, function() {
+  console.log('Our app is running on http://localhost:' + port);
 });
 
 module.exports = app;
