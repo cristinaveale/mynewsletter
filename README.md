@@ -29,3 +29,8 @@ You'll then see the following in your terminal:
 8080 is the magic port
 ```
 Navigate to: http://localhost:8080/
+
+In another terminal, run `cqlsh` and run the following:
+```sh
+-f schema.cql -k people
+```

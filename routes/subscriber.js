@@ -9,7 +9,7 @@ client.connect(function( err, result){
 }); 
 
 // Get a subscriber by ID
-const getSubscriberById = 'SELECT * FROM people.subscribers WHERE id = ?'
+const getSubscriberById = 'SELECT * FROM people.subscribers WHERE id = ?';
 
 /* GET subscriber listing. */
 router.get('/:id', function(req, res) {
@@ -27,6 +27,19 @@ router.get('/:id', function(req, res) {
       })
     } 
   });
+});
+
+const deleteSubscriber = 'DELETE FROM people.subscribers WHERE id = ?';
+
+router.delete('/:id', function(req, res){
+	client.execute(deleteSubscriber,[req.params.id], function(err, result){
+		if(err){
+			res.status(404).send({msg: err});
+		} else {
+      console.log('Subscriber Deleted');
+			res.json(result);
+		}
+	});
 });
 
 module.exports = router;

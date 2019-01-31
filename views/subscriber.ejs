@@ -16,8 +16,10 @@
         <li><%= email %></li>
         <li><%= id %></li>
       </ul>
+
       <a href="/editSubscriber/<%= id %>" class="editSubscriber btn btn-sm btn-outline-secondary">Edit Information</a>
-      <a href="#" class="editSubscriber btn btn-sm btn-outline-secondary" data-id="<$= id %>">Delete Information</a>
+
+      <a href="" class="delete-subscriber btn btn-sm btn-outline-secondary" data-id="<%= id %>">Delete Information</a>
     </main>
 
     <footer><% include ./partials/footer %></footer>
