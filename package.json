@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": "10.15.0"
+  },
   "dependencies": {
     "cassandra-driver": "*",
     "debug": "~2.6.9",

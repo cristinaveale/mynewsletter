@@ -1,0 +1,6 @@
+{
+  "name":"Node.js Newsletter Application",
+  "description":"A simple newsletter app utilizing Node.js, Express, and DataStax Cassandra DB",
+  "repository":"https://github.com/cristinaveale/mynewsletter",
+  "keywords": ["node", "cassandra", "datastax", "express"]
+}
