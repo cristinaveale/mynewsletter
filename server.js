@@ -12,9 +12,6 @@ const subscribers = require("./routes/subscribers");
 const addSubscriber = require("./routes/addSubscriber");
 const editSubscriber = require("./routes/editSubscriber");
 
-
-
-
 // view e ngine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -31,11 +28,13 @@ app.use("/editSubscriber", editSubscriber);
 
 // set the home page route
 app.get('/', function(req, res) {
-
   // ejs render automatically looks in the views folder
   res.render('index');
 });
 
+process.on('uncaughtException', function (err) {
+  console.log(err);
+});
 
 app.listen(port, function() {
   console.log('Our app is running on http://localhost:' + port);
